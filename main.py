@@ -7,9 +7,11 @@ class Index(webapp2.RequestHandler):
         message = "Hellooooo world!"
         encrypted_message = caesar.encrypt(message, 13)
 
+        textarea = "<textarea>" + encrypted_message + "</textarea>"
+        submit = "<input type='submit'/>"
+        form = "<form>" + textarea + "<br>" + submit + "</form>"
 
-
-        self.response.write(encrypted_message)
+        self.response.write(form)
 
 app = webapp2.WSGIApplication([
     ('/', Index)
