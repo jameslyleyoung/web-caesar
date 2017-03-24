@@ -9,7 +9,7 @@ class Index(webapp2.RequestHandler):
 
         textarea = "<textarea>" + encrypted_message + "</textarea>"
         submit = "<input type='submit'/>"
-        form = "<form>" + textarea + "<br>" + submit + "</form>"
+        form = "<form action=''>" + textarea + "<br>" + submit + "</form>"
 
         self.response.write(form)
 
